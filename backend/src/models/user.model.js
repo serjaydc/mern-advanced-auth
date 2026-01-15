@@ -10,14 +10,11 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
       unique: true,
+      lowercase: true,
     },
     password: {
       type: String,
       required: true,
-    },
-    lastLogin: {
-      type: Date,
-      default: Date.now,
     },
     isVerified: {
       type: Boolean,
